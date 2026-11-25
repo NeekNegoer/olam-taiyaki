@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cpqpcdl1hhsgb"]
+
+[ext_resource type="Script" uid="uid://cxtgpmhavo7ao" path="res://src/combat/skill_data.gd" id="1_wf2ta"]
+
+[resource]
+script = ExtResource("1_wf2ta")
+display_name = "Golpe"
+base_power = 4
+sparks = 3
+metadata/_custom_type_script = "uid://cxtgpmhavo7ao"
