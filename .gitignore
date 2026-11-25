@@ -1,0 +1,16 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exports (builds web/desktop)
+/build/
+/export/
+
+# WakaTime CLI baixado pelo plugin (grande e reinstalável)
+addons/godot_super-wakatime/wakatime.zip
+addons/godot_super-wakatime/wakatime-cli*
+
+/preparar_git.bat
+/git_status.txt
+/publicar_git.bat
+/git_push.txt
