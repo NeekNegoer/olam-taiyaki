@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bqxv3j7c1mlgu"]
+
+[ext_resource type="Script" uid="uid://fu5jvd8rq6a7" path="res://scenes/combat/fighter_test.gd" id="1_187af"]
+[ext_resource type="PackedScene" uid="uid://c6hu3t5jtprmx" path="res://scenes/combat/fighter.tscn" id="1_tnwek"]
+
+[node name="FighterTest" type="Node2D" unique_id=790482132]
+script = ExtResource("1_187af")
+
+[node name="FighterA" parent="." unique_id=1119806751 instance=ExtResource("1_tnwek")]
+position = Vector2(400, 400)
+
+[node name="FighterB" parent="." unique_id=1897187889 instance=ExtResource("1_tnwek")]
+position = Vector2(800, 400)
+facing = -1

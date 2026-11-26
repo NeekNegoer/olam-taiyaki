@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c6hu3t5jtprmx"]
+
+[ext_resource type="Script" uid="uid://c8u3rcypcf0vp" path="res://src/presentation/fighter.gd" id="1_3gchb"]
+
+[node name="Fighter" type="Node2D" unique_id=1119806751]
+script = ExtResource("1_3gchb")
+
+[node name="Body" type="Polygon2D" parent="." unique_id=1270335067]
+color = Color(0.087311454, 0.36373132, 0.6519859, 1)
+polygon = PackedVector2Array(-30, 0, 30, 0, 30, -90, 15, -90, 15, -120, -15, -120, -15, -90, -30, -90)
+
+[node name="NameLabel" type="Label" parent="." unique_id=275402070]
+offset_left = -40.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 31.0
+text = "Ben"
+horizontal_alignment = 1
+
+[node name="SparkRow" type="Node2D" parent="." unique_id=455906691]
+position = Vector2(0, -145)
