@@ -8,7 +8,7 @@ extends Control
 @onready var log_label: RichTextLabel = %Log
 
 var skill_a := SkillData.make(&"golpe", 4, 3, 2, SkillData.Stone.RED)
-var skill_b := SkillData.make(&"garra", 3, 4, 1, SkillData.Stone.YELLOW)
+var skill_b := SkillData.make(&"garra", 3, 4, 2, SkillData.Stone.YELLOW)
 
 
 func _ready() -> void:
