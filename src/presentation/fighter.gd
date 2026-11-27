@@ -43,6 +43,7 @@ func flash() -> void:
 	modulate = Color(3, 3, 3)
 	tween.tween_property(self, "modulate", Color.WHITE, 0.1)
 
+
 func show_sparks(count: int) -> void:
 	for filho in spark_row.get_children():
 		spark_row.remove_child(filho)
@@ -51,6 +52,7 @@ func show_sparks(count: int) -> void:
 		var s := SPARK_SCENE.instantiate()
 		spark_row.add_child(s)
 		s.position.x = i * 28 - (count -1) * 28 / 2.0
+
 
 func spark(slot: int) -> SparkView:
 	return spark_row.get_child(slot)

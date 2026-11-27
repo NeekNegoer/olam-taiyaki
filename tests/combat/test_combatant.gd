@@ -1,50 +1,21 @@
-class_name Combatant
-extends RefCounted
+extends GutTest
 
-const LIGHT_CLASH_WIN := 1
-const LIGHT_CLASH_LOSS := -1
-const LIGHT_ALLY_DOWN := -2
-const LIGHT_NIGHT_START := -3
+func test_luz_limitada() -> void:
+	var c := Combatant.new("Ben", 20)
+	c.add_light(50)
+	assert_eq(c.light, 10)
+	c.add_light(-50)
+	assert_eq(c.light, -10)
 
-const AWAKENING_MAX := 100
-const AWAKENING_PER_CLASH_WIN := 20
-const AWAKENING_LIGHT_COST := 5
-const AWAKENING_MIN_LIGHT := -5
+func test_dano_nao_negativo() -> void:
+	var c := Combatant.new("Ben", 20)
+	c.take_damage(25)
+	assert_eq(c.hp, 0)
+	assert_true(c.is_down())
 
-var display_name: String
-var max_hp: int
-var hp: int
-var light: int = 0
-var awakening: int = 0
-var skills: Array[SkillData]
-
-func _init(p_name: String, p_max_hp: int, p_skills: Array[SkillData] = []) -> void:
-	display_name = p_name
-	max_hp = p_max_hp
-	hp = p_max_hp
-	skills = p_skills
-
-func add_light(amount: int) -> void:
-	light = clampi(light + amount, Sparks.LIGHT_MIN, Sparks.LIGHT_MAX)
-
-func take_damage(amount: int) -> void:
-	hp = maxi(hp - amount, 0)
-
-func is_down() -> bool:
-	return hp == 0
-
-func is_panicking() -> bool:
-	return light == Sparks.LIGHT_MIN
-
-func gain_awakening(amount: int) -> void:
-	awakening = clampi(awakening + amount, 0, AWAKENING_MAX)
-
-func can_awaken() -> bool:
-	return awakening == AWAKENING_MAX and light - AWAKENING_LIGHT_COST >= AWAKENING_MIN_LIGHT
-
-func awaken() -> bool:
-	if not can_awaken():
-		return false
-	awakening = 0
-	add_light(-AWAKENING_LIGHT_COST)
-	return true
+func test_panico_so_no_minimo() -> void:
+	var c := Combatant.new("Ben", 20)
+	c.add_light(-9)
+	assert_false(c.is_panicking())
+	c.add_light(-1)
+	assert_true(c.is_panicking())

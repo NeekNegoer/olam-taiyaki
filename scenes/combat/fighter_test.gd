@@ -20,3 +20,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_4:
 				fighter_a.flash()
 				fighter_b.flash()
+			KEY_5:
+				fighter_a.show_sparks(4)
+				fighter_b.show_sparks(4)
+			KEY_6:
+				fighter_a.spark(0).ignite()

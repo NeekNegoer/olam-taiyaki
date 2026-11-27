@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cegdj0qtwksf2"]
 
 [ext_resource type="Script" uid="uid://dh3pik7vwaljn" path="res://scenes/debug/clash_sandbox.gd" id="1_lj7uv"]
-[ext_resource type="Script" uid="uid://c8u3rcypcf0vp" path="res://src/presentation/fighter.gd" id="2_075mt"]
 
 [node name="ClashSandbox" type="Control" unique_id=397562784]
 layout_mode = 3
@@ -45,8 +44,3 @@ text = "Confronto!"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1746445000]
-script = ExtResource("2_075mt")
-
-[node name="Polygon2D" type="Polygon2D" parent="Node2D" unique_id=701332609]
