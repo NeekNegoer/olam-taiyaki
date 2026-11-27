@@ -28,10 +28,10 @@ func snuff() -> void:
 	_tween.tween_property(self, "scale", Vector2(0.7, 0.7), 0.2)
 	_tween.tween_property(self, "modulate:a", 0.4, 0.2)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo:
-		match event.keycode:
-			KEY_1:
-				ignite()
-			KEY_2:
-				snuff()
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event is InputEventKey and event.pressed and not event.echo:
+		#match event.keycode:
+			#KEY_1:
+				#ignite()
+			#KEY_2:
+				#snuff()
